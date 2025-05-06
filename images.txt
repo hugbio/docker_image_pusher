@@ -1,6 +1,24 @@
-nginx
+#nginx
 #支持私库
-k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-xhofe/alist:latest
+#k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+#xhofe/alist:latest
 #支持指定架构
---platform=linux/arm64 xiaoyaliu/alist
+#--platform=linux/arm64 xiaoyaliu/alist
+
+#小雅Alist
+xiaoyaliu/alist
+
+#Bitwarden
+vaultwarden/server
+
+#nginx-proxy-manager
+jc21/nginx-proxy-manager
+
+#nginx-proxy-manager需要用到的数据库
+jc21/mariadb-aria
+
+#portainer,docker UI,Compose
+portainer/portainer
+
+#rss阅读器
+guyskk/rssant
