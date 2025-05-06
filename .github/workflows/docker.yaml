@@ -131,11 +131,15 @@ jobs:
         
             name_space_prefix=""
             # 如果镜像名重名
-            if [[ -n "${duplicate_images[$image_name]}" ]]; then
-               #如果命名空间非空，将命名空间加到前缀
-               if [[ -n "${name_space}" ]]; then
-                  name_space_prefix="${name_space}_"
-               fi
+            #if [[ -n "${duplicate_images[$image_name]}" ]]; then
+            #   #如果命名空间非空，将命名空间加到前缀
+            #   if [[ -n "${name_space}" ]]; then
+            #      name_space_prefix="${name_space}_"
+            #   fi
+            #fi
+            #默认都将命名空间加到前缀，这样推送到阿里云镜像仓库后好辨认，否则像vaultwarden/server这种推送后就只有一个server不好辨认
+            if [[ -n "${name_space}" ]]; then
+               name_space_prefix="${name_space}_"
             fi
             
             # 将@sha256:等字符删除
